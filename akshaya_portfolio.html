@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Akshaya M — Full Stack Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Plus+Jakarta+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#0d0d0d;color:#f0ede6;line-height:1.7;-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,13,13,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:62px}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;background:linear-gradient(90deg,#ff6b6b,#ffd93d,#6bcb77,#4d96ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;text-decoration:none}
+.nav-links{display:flex;gap:1.6rem;list-style:none}
+.nav-links a{font-size:13px;font-weight:500;color:rgba(240,237,230,0.5);text-decoration:none;letter-spacing:0.4px;transition:color 0.2s}
+.nav-links a:hover{color:#ffd93d}
+
+section{padding:5.5rem 5vw;max-width:940px;margin:0 auto}
+
+/* HERO */
+#hero{padding-top:8rem;min-height:92vh;display:flex;flex-direction:column;justify-content:center;gap:1.6rem}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);color:#ffd93d;font-size:12px;font-weight:500;padding:6px 16px;border-radius:100px;width:fit-content}
+.pulse{width:8px;height:8px;border-radius:50%;background:#6bcb77;display:inline-block;animation:blink 1.4s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero-name{font-family:'Syne',sans-serif;font-size:clamp(3rem,8vw,5.5rem);font-weight:800;line-height:1.0;letter-spacing:-2.5px}
+.grad{background:linear-gradient(135deg,#ff6b6b 0%,#ffd93d 35%,#6bcb77 65%,#4d96ff 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero-sub{font-size:17px;color:rgba(240,237,230,0.55);max-width:500px;font-weight:300}
+.hero-cta{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-main{background:linear-gradient(135deg,#ff6b6b,#ffd93d);color:#0d0d0d;padding:13px 30px;border-radius:100px;font-size:14px;font-weight:700;text-decoration:none;transition:transform 0.2s,opacity 0.2s;display:inline-block}
+.btn-main:hover{transform:translateY(-2px);opacity:0.9}
+.btn-ghost{background:transparent;color:#f0ede6;padding:13px 30px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;border:1.5px solid rgba(255,255,255,0.2);transition:background 0.2s;display:inline-block}
+.btn-ghost:hover{background:rgba(255,255,255,0.07)}
+
+/* LABELS & TITLES */
+.lbl{font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#ffd93d;margin-bottom:0.5rem}
+.ttl{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;letter-spacing:-1.5px;line-height:1.1;color:#f0ede6;margin-bottom:2rem}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:4rem;align-items:center}
+.about-text p{color:rgba(240,237,230,0.6);font-size:15px;margin-bottom:1rem}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sc{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:1.4rem 1.2rem;text-align:center;transition:border-color 0.2s}
+.sc:hover{border-color:rgba(255,217,61,0.4)}
+.sn{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;line-height:1;margin-bottom:4px}
+.s1{color:#ff6b6b}.s2{color:#ffd93d}.s3{color:#6bcb77}.s4{color:#4d96ff}
+.sl{font-size:11px;color:rgba(240,237,230,0.4)}
+
+/* SKILLS */
+#skills{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:24px;padding:3.5rem;max-width:940px;margin:0 auto 2rem}
+.sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px}
+.sk{background:#0d0d0d;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:1.3rem 1rem;text-align:center;transition:transform 0.2s,border-color 0.2s}
+.sk:hover{transform:translateY(-5px);border-color:rgba(255,255,255,0.22)}
+.si{width:36px;height:36px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:13px;font-weight:700}
+.ic1{background:rgba(255,107,107,0.15);color:#ff6b6b}
+.ic2{background:rgba(77,150,255,0.15);color:#4d96ff}
+.ic3{background:rgba(255,217,61,0.15);color:#ffd93d}
+.ic4{background:rgba(107,203,119,0.15);color:#6bcb77}
+.ic5{background:rgba(183,107,255,0.15);color:#b76bff}
+.sknm{font-size:13px;font-weight:500;color:#f0ede6}
+.sksb{font-size:11px;color:rgba(240,237,230,0.4);margin-top:3px}
+.lrn{display:inline-block;font-size:10px;font-weight:600;background:rgba(255,217,61,0.15);color:#ffd93d;padding:2px 8px;border-radius:100px;margin-top:5px}
+
+/* EDUCATION */
+.edu-list{display:flex;flex-direction:column;gap:1.2rem}
+.ec{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:1.8rem 2.2rem;display:flex;align-items:flex-start;gap:1.5rem;transition:border-color 0.2s,background 0.2s}
+.ec:hover{border-color:rgba(255,255,255,0.15);background:rgba(255,255,255,0.05)}
+.ei{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;flex-shrink:0}
+.ei1{background:rgba(255,107,107,0.15);color:#ff6b6b}
+.ei2{background:rgba(77,150,255,0.15);color:#4d96ff}
+.edg{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:#f0ede6;margin-bottom:4px}
+.edf{font-size:13px;color:rgba(240,237,230,0.45);margin-bottom:8px;line-height:1.5}
+.cgpa{display:inline-flex;align-items:center;font-size:12px;font-weight:600;padding:4px 14px;border-radius:100px}
+.cg1{background:rgba(255,107,107,0.12);color:#ff6b6b}
+.cg2{background:rgba(107,203,119,0.12);color:#6bcb77}
+
+/* PROJECTS */
+.plist{display:flex;flex-direction:column;gap:1.2rem}
+.pc{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:2rem 2.2rem;display:grid;grid-template-columns:1fr auto;gap:1.5rem;align-items:start;transition:transform 0.2s,border-color 0.2s,background 0.2s}
+.pc:hover{transform:translateY(-3px);border-color:rgba(255,255,255,0.15);background:rgba(255,255,255,0.05)}
+.pc.feat{border-color:rgba(255,217,61,0.28)}
+.pc.feat:hover{border-color:rgba(255,217,61,0.55)}
+.pn{font-size:11px;font-weight:700;letter-spacing:1.5px;margin-bottom:6px}
+.n1{color:#ff6b6b}.n2{color:#6bcb77}.n3{color:#4d96ff}.n4{color:#ffd93d}
+.pbadge{display:inline-block;font-size:10px;font-weight:600;padding:3px 10px;border-radius:100px;margin-bottom:8px;margin-right:5px}
+.pb-ug{background:rgba(255,107,107,0.15);color:#ff6b6b}
+.pb-pg{background:rgba(107,203,119,0.15);color:#6bcb77}
+.pb-main{background:rgba(255,217,61,0.15);color:#ffd93d}
+.pt{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:700;color:#f0ede6;margin-bottom:8px;letter-spacing:-0.3px}
+.pd{font-size:13px;color:rgba(240,237,230,0.5);line-height:1.65;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:11px;font-weight:500;padding:4px 10px;border-radius:100px;background:rgba(255,255,255,0.07);color:rgba(240,237,230,0.7)}
+.arr{width:42px;height:42px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;font-size:16px;color:rgba(240,237,230,0.4);transition:all 0.2s;flex-shrink:0}
+.pc:hover .arr{background:#ffd93d;color:#0d0d0d;border-color:#ffd93d}
+
+/* CONTACT */
+#contact{padding-bottom:3rem}
+.cw{background:linear-gradient(135deg,#1a0a2e 0%,#0d1f3c 50%,#0a2e1a 100%);border:1px solid rgba(255,255,255,0.1);border-radius:28px;padding:4rem 3.5rem;max-width:720px;margin:0 auto;text-align:center}
+.csub{font-size:15px;color:rgba(240,237,230,0.5);margin-bottom:2.5rem;font-weight:300}
+.ccards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:2.5rem}
+.ccard{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:1.4rem 1rem;text-align:center;text-decoration:none;transition:background 0.2s,transform 0.2s;display:block}
+.ccard:hover{background:rgba(255,255,255,0.1);transform:translateY(-3px)}
+.cci{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:16px;font-weight:700}
+.cc1{background:rgba(107,203,119,0.15);color:#6bcb77}
+.cc2{background:rgba(255,107,107,0.15);color:#ff6b6b}
+.cc3{background:rgba(77,150,255,0.15);color:#4d96ff}
+.ccl{font-size:10px;color:rgba(240,237,230,0.4);letter-spacing:1px;text-transform:uppercase;font-weight:500;margin-bottom:4px}
+.ccv{font-size:12px;font-weight:500;color:#f0ede6;word-break:break-all}
+
+footer{text-align:center;padding:2rem 5vw;font-size:13px;color:rgba(240,237,230,0.25);border-top:1px solid rgba(255,255,255,0.06)}
+
+@keyframes up{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.on{opacity:1;transform:none}
+
+@media(max-width:700px){
+  .about-grid{grid-template-columns:1fr;gap:2rem}
+  .pc{grid-template-columns:1fr}
+  .ec{flex-direction:column;align-items:flex-start}
+  #skills{padding:2rem 1.5rem}
+  section{padding:4rem 5vw}
+  .nav-links{gap:1rem}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#hero">AM</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-badge"><span class="pulse"></span> Open to opportunities</div>
+  <h1 class="hero-name"><span class="grad">Akshaya.M</span><br/>Full Stack Dev</h1>
+  <p class="hero-sub">Building energetic web experiences — clean frontends, solid backends, and a growing curiosity for AI & ML.</p>
+  <div class="hero-cta">
+    <a class="btn-main" href="#projects">See my work</a>
+    <a class="btn-ghost" href="#contact">Get in touch</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid reveal">
+    <div class="about-text">
+      <p class="lbl">About me</p>
+      <h2 class="ttl">Code, creativity & curiosity</h2>
+      <p>I'm Akshaya M, a full stack developer who loves turning ideas into real, working products. I care as much about how things feel as how they function.</p>
+      <p>Currently pursuing my MCA and diving deep into Artificial Intelligence and Machine Learning — always learning, always building.</p>
+    </div>
+    <div class="stat-grid">
+      <div class="sc"><div class="sn s1">3+</div><div class="sl">Projects built</div></div>
+      <div class="sc"><div class="sn s2">5</div><div class="sl">Technologies</div></div>
+      <div class="sc"><div class="sn s3">8.7</div><div class="sl">PG CGPA</div></div>
+      <div class="sc"><div class="sn s4">AI</div><div class="sl">Currently learning</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" style="padding:3.5rem">
+  <p class="lbl reveal">Skills</p>
+  <h2 class="ttl reveal">What I work with</h2>
+  <div class="sk-grid reveal">
+    <div class="sk"><div class="si ic1">H</div><div class="sknm">HTML</div><div class="sksb">Semantic markup</div></div>
+    <div class="sk"><div class="si ic2">C</div><div class="sknm">CSS</div><div class="sksb">Responsive design</div></div>
+    <div class="sk"><div class="si ic3">JS</div><div class="sknm">JavaScript</div><div class="sksb">ES6+ / DOM</div></div>
+    <div class="sk"><div class="si ic4">Py</div><div class="sknm">Python</div><div class="sksb">Backend & scripts</div></div>
+    <div class="sk"><div class="si ic5">AI</div><div class="sknm">AI & ML</div><div class="lrn">Learning</div></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <p class="lbl reveal">Education</p>
+  <h2 class="ttl reveal">Academic background</h2>
+  <div class="edu-list">
+    <div class="ec reveal">
+      <div class="ei ei2">MCA</div>
+      <div>
+        <div class="edg">Master of Computer Applications (MCA)</div>
+        <div class="edf">Postgraduate degree covering advanced software development, databases, networking, cybersecurity, and emerging technologies like AI & ML.</div>
+        <span class="cgpa cg2">CGPA: 8.7 / 10</span>
+      </div>
+    </div>
+    <div class="ec reveal">
+      <div class="ei ei1">BSc</div>
+      <div>
+        <div class="edg">Bachelor of Science in Computer Science (BSc CS)</div>
+        <div class="edf">Undergraduate degree covering programming fundamentals, web development, data structures, database management, and software engineering.</div>
+        <span class="cgpa cg1">CGPA: 7.0 / 10</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <p class="lbl reveal">Projects</p>
+  <h2 class="ttl reveal">Things I've built</h2>
+  <div class="plist">
+
+    <div class="pc feat reveal">
+      <div>
+        <div class="pn n4">01 — PG MAIN PROJECT</div>
+        <span class="pbadge pb-main">MCA · Featured</span>
+        <div class="pt">AI Based File Integrity Analysis and Investigation System</div>
+        <p class="pd">An intelligent system that uses AI and machine learning to monitor, analyse, and investigate file integrity — detecting unauthorized modifications, tampering, and anomalies in file systems using forensic investigation methods and automated threat response.</p>
+        <div class="tags">
+          <span class="tag">Artificial Intelligence</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Python</span>
+          <span class="tag">Cyber Forensics</span>
+          <span class="tag">File Systems</span>
+        </div>
+      </div>
+      <div class="arr">↗</div>
+    </div>
+
+    <div class="pc reveal">
+      <div>
+        <div class="pn n2">02 — PG MINI PROJECT</div>
+        <span class="pbadge pb-pg">MCA</span>
+        <div class="pt">Smart Exam Surveillance System Using Cyber Security</div>
+        <p class="pd">An intelligent exam monitoring system leveraging cybersecurity principles to detect and prevent malpractice in online examinations — using secure authentication, real-time monitoring, and threat detection techniques.</p>
+        <div class="tags">
+          <span class="tag">Cyber Security</span>
+          <span class="tag">Python</span>
+          <span class="tag">Surveillance</span>
+          <span class="tag">AI</span>
+        </div>
+      </div>
+      <div class="arr">↗</div>
+    </div>
+
+    <div class="pc reveal">
+      <div>
+        <div class="pn n1">03 — UG MINI PROJECT</div>
+        <span class="pbadge pb-ug">BSc CS</span>
+        <div class="pt">A Guide to Ethical Data Exchange</div>
+        <p class="pd">A research and implementation project exploring the principles and best practices around ethical data exchange — covering consent, transparency, data privacy, and responsible sharing between systems and stakeholders.</p>
+        <div class="tags">
+          <span class="tag">Data Ethics</span>
+          <span class="tag">Python</span>
+          <span class="tag">Research</span>
+          <span class="tag">Data Exchange</span>
+        </div>
+      </div>
+      <div class="arr">↗</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="cw reveal">
+    <p class="lbl">Contact</p>
+    <h2 class="ttl">Let's connect</h2>
+    <p class="csub">Open to internships, collaborations, and exciting projects. Reach out anytime!</p>
+    <div class="ccards">
+      <a class="ccard" href="tel:+919344848931">
+        <div class="cci cc1">📞</div>
+        <div class="ccl">Phone</div>
+        <div class="ccv">+91 93448 48931</div>
+      </a>
+      <a class="ccard" href="mailto:m.s.aksh2003@gmail.com">
+        <div class="cci cc2">✉</div>
+        <div class="ccl">Email</div>
+        <div class="ccv">m.s.aksh2003@gmail.com</div>
+      </a>
+      <a class="ccard" href="https://www.linkedin.com/in/m-akshaya-6b7736374" target="_blank">
+        <div class="cci cc3">in</div>
+        <div class="ccl">LinkedIn</div>
+        <div class="ccv">m-akshaya-6b7736374</div>
+      </a>
+    </div>
+    <a class="btn-main" href="mailto:m.s.aksh2003@gmail.com">Send an email</a>
+  </div>
+</section>
+
+<footer>Designed & built by Akshaya M &nbsp;·&nbsp; 2025</footer>
+
+<script>
+const els = document.querySelectorAll('.reveal');
+const obs = new IntersectionObserver(entries => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('on'), i * 90);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+els.forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
